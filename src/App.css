@@ -17,7 +17,7 @@ p {
 }
 
 .img {
-  background-image: radial-gradient(red, blue, black, white);
+  background-image: linear-gradient( to top ,  black, #d7d7d7);
   filter: drop-shadow(0 0 40px line);
   position: relative;
   

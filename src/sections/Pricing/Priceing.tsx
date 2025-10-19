@@ -1,5 +1,3 @@
-import React from "react"
-
 const plans = [
   {
     title: "Free Plan",
@@ -9,7 +7,6 @@ const plans = [
       { text: "1 Project", active: true },
       { text: "2 Pages per project", active: true },
       { text: "25 Components per page", active: true },
-      { text: "Light & Dark Wireframes", active: true },
       { text: "Apply all design systems", active: true },
       { text: "Export Wireframe to Webflow", active: false },
       { text: "Export Design to Webflow", active: false },
@@ -56,20 +53,20 @@ const plans = [
 
 function Pricing() {
   return (
-    <section className="w-full font-['a'] py-20 bg-[#fafafa] text-black">
+    <section className="w-full font-['a'] py-20 bg-black text-white">
       <div className="text-center mb-10">
         <h1 className="text-4xl font-bold mb-2">Build a website with AI</h1>
         <p className="text-xl">Free for 7 days</p>
-        <p className="text-gray-600 mt-3">
+        <p className="text-gray-300 mt-3">
           Choose the best plan for your business. Change plans as you grow.
         </p>
       </div>
 
       <div className="flex justify-center mb-10 gap-2">
-        <button className="px-4 py-2 border border-gray-300 rounded-full text-sm bg-white">
+        <button className="px-4 py-2 border border-white rounded-full text-sm bg-black text-white hover:bg-white hover:text-black transition-all">
           Monthly
         </button>
-        <button className="px-4 py-2 border border-black bg-black text-white rounded-full text-sm">
+        <button className="px-4 py-2 border border-white bg-white text-black rounded-full text-sm hover:bg-transparent hover:text-white transition-all">
           Yearly (save 20%)
         </button>
       </div>
@@ -79,40 +76,45 @@ function Pricing() {
           <div
             key={i}
             className={`w-80 rounded-2xl p-[2px] ${
-              plan.best ? "bg-gradient-to-r from-purple-500 to-pink-500" : "bg-gray-200"
+              plan.best
+                ? "bg-gradient-to-r from-white to-gray-700"
+                : "bg-white/10"
             }`}
           >
-            
-            <div className="bg-white rounded-2xl p-8 h-full flex flex-col justify-between">
+            <div className="bg-black rounded-2xl p-8 h-full flex flex-col justify-between">
               <div>
                 {plan.best && (
-                  <p className="text-xs text-purple-600 font-semibold mb-2">Best Value</p>
+                  <p className="text-xs text-white/80 font-semibold mb-2">Best Value</p>
                 )}
-                <h2 className="text-2xl font-['a'] font-semibold mb-2">{plan.title}</h2>
+                <h2 className="text-2xl font-semibold mb-2">{plan.title}</h2>
                 <div className="flex items-end gap-1 mb-4">
                   <h3 className="text-4xl font-bold">{plan.price}</h3>
-                  <span className="text-gray-600 text-sm">{plan.period}</span>
+                  <span className="text-sm text-gray-400">{plan.period}</span>
                 </div>
-                <p className="text-gray-600 text-sm mb-6">{plan.desc}</p>
+                <p className="text-gray-400 text-sm mb-6">{plan.desc}</p>
                 <ul className="space-y-2">
                   {plan.features.map((f, index) => (
                     <li
                       key={index}
                       className={`text-sm flex items-center gap-2 ${
-                        f.active ? "text-black" : "text-gray-400 line-through"
+                        f.active ? "text-white" : "text-gray-500 line-through"
                       }`}
                     >
-                      <span className={`w-2 h-2 rounded-full ${f.active ? "bg-black" : "bg-gray-300"}`}></span>
+                      <span
+                        className={`w-2 h-2 rounded-full ${
+                          f.active ? "bg-white" : "bg-gray-600"
+                        }`}
+                      ></span>
                       {f.text}
                     </li>
                   ))}
                 </ul>
               </div>
               <button
-                className={`mt-8 w-full py-3 rounded-full font-medium transition-all ${
+                className={`mt-8 w-full py-3 rounded-full font-medium transition-all border ${
                   plan.best
-                    ? "bg-black text-white hover:bg-gray-900"
-                    : "bg-white border border-gray-300 hover:bg-gray-100"
+                    ? "bg-white text-black border-white hover:bg-transparent hover:text-white"
+                    : "bg-black text-white border-white hover:bg-white hover:text-black"
                 }`}
               >
                 Try it now

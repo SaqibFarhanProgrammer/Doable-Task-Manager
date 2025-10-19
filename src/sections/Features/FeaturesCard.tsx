@@ -1,30 +1,29 @@
 
-function FeatureCard() {
+function FeatureCard({ title, desc, videoSrc }) {
   return (
-    <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#ffffff] to-[#f1f1f1] shadow-[0_10px_30px_rgba(0,0,0,0.1)] transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)]">
-      {/* Video Background */}
+    <div className="group relative overflow-hidden rounded-3xl bg-[#0a0a0a] border border-white/10 shadow-[0_0_30px_rgba(255,255,255,0.05)] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_50px_rgba(255,255,255,0.08)]">
       <video
-        src="https://cdn.dribbble.com/userupload/43095420/file/original-f792719d0519f45a3a026249f6922c53.mp4"
+        src={videoSrc}
         autoPlay
-        muted
         loop
-        className="absolute top-0 left-0 w-full h-full object-cover opacity-40 group-hover:opacity-70 transition-opacity duration-500"
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover opacity-30 group-hover:opacity-60 transition-opacity duration-700"
       />
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-70"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
 
-      {/* Content */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_70%)]" />
+
       <div className="relative z-10 flex flex-col items-center justify-end h-[380px] p-8 text-white text-center">
-        <h2 className="text-2xl font-semibold tracking-tight mb-3 group-hover:text-white/90 transition-colors">
-          Smart Task Management
+        <h2 className="text-2xl font-semibold mb-3 text-white/90 group-hover:text-white transition-colors duration-300">
+          {title}
         </h2>
-        <p className="text-sm text-gray-200 leading-relaxed max-w-xs">
-          Organize your workflow and boost your productivity with a minimal, focused and beautifully designed dashboard.
+        <p className="text-sm text-gray-400 leading-relaxed max-w-xs group-hover:text-gray-200 transition-colors duration-300">
+          {desc}
         </p>
 
-        {/* Subtle bottom glow */}
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+        <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
       </div>
     </div>
   )
