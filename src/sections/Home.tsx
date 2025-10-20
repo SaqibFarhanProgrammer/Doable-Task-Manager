@@ -7,8 +7,12 @@ export default function Home() {
     <div className="relative h-[80vh] w-full overflow-hidden text-white">
       {/* Background Light Effect */}
       <div className="absolute inset-0 z-0">
-      <LightRays color="#fff" className="top-[-140vh]" opacity={0.25} blur={80} />
-
+        <LightRays
+          color="#fff"
+          className="top-[-140vh]"
+          opacity={0.25}
+          blur={80}
+        />
       </div>
 
       {/* Content Layer */}
@@ -31,7 +35,7 @@ export default function Home() {
             <Link to="/login">
               <MainButton text="Login" classname="bg-zinc-800 text-white" />
             </Link>
-            <Link to="/home">
+            <Link to="/work">
               <MainButton
                 classname="bg-white hover:bg-black hover:text-white text-black border border-[#6a6a6a]"
                 text="Manage Your Tasks"
