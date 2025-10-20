@@ -32,3 +32,7 @@ p {
   filter: blur(40px);
   z-index: -1;
 }
+
+
+.project_card {
+}
