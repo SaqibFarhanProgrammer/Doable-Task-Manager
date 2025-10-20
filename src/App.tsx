@@ -9,6 +9,7 @@ import { Route,  Routes } from "react-router-dom";
 import LoginPage from "./Auth/Login";
 import SignupPage from "./Auth/Signup";
 import Not_Found from "./components/Not_Found";
+import Web_App from "./Web-App/Web_App";
 const App = () => {
   return (
     <div className="bg-[#000] text-white">
@@ -27,6 +28,8 @@ const App = () => {
         />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/work" element={<Web_App />} />
         <Route path="*" element={<Not_Found />} />
       </Routes>
     </div>
