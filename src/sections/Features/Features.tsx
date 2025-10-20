@@ -23,21 +23,17 @@ const Features = () => {
   ]
 
   return (
-    <section className="min-h-[90vh] gap-10 w-full bg-black flex flex-col justify-center items-center py-20 px-6 text-white">
+    <section className="min-h-[90vh] w-full bg-black flex flex-col justify-center items-center py-20 px-6 text-white gap-16">
       {featuresData.map((feature, index) => (
         <div
           key={index}
-          className="w-full max-w-7xl font-['a'] bg-[#0d0d0d]/70 border border-white/10 rounded-3xl p-12 relative overflow-hidden backdrop-blur-md shadow-[0_0_60px_rgba(255,255,255,0.03)]"
+          className="w-full max-w-7xl bg-[#0d0d0d]/70 border border-white/10 rounded-3xl p-12 relative overflow-hidden backdrop-blur-md shadow-[0_0_60px_rgba(255,255,255,0.03)]"
         >
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.1),transparent_70%)]" />
 
-          <div
-            className={`flex flex-col lg:flex-row items-center gap-16 relative z-10 ${
-              index % 2 !== 0 ? "lg:flex-row-reverse" : ""
-            }`}
-          >
+          <div className="flex flex-col lg:flex-row items-center gap-16 relative z-10">
             {/* Card Section */}
-            <div className="w-full lg:w-1/2 bg-[#141414] border border-white/10 rounded-2xl p-6 shadow-[0_0_30px_rgba(255,255,255,0.05)]">
+            <div className="w-full lg:w-1/2">
               <FeatureCard
                 title={feature.title}
                 desc={feature.desc}
