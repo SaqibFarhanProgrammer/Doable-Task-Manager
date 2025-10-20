@@ -1,4 +1,3 @@
-import React from 'react';
 import { LuSearch } from "react-icons/lu";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
 import { TfiLayoutGrid3Alt } from "react-icons/tfi";
@@ -9,7 +8,7 @@ import { MdOutlineLibraryBooks } from "react-icons/md";
 import { LuUsers } from "react-icons/lu";
 import { GoDotFill } from "react-icons/go";
 
-
+  
 function Sidebar() {
   return (
     <div className="w-[17vw] h-[98vh] p-2 bg-[#121212] rounded-2xl flex flex-col justify-between">

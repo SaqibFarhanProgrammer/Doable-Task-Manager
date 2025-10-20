@@ -1,4 +1,3 @@
-import React from 'react';
 import { LuSparkles } from "react-icons/lu";
 import { RiPresentationFill } from "react-icons/ri";
 import { RiMicLine } from "react-icons/ri";
