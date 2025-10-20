@@ -7,18 +7,8 @@ export default function Home() {
     <div className="relative h-[80vh] w-full overflow-hidden text-white">
       {/* Background Light Effect */}
       <div className="absolute inset-0 z-0">
-        <LightRays
-          raysOrigin="top-center"
-          raysColor="#ffff"
-          raysSpeed={0.1}
-          lightSpread={0.8}
-          rayLength={1.2}
-          followMouse={true}
-          mouseInfluence={0.1}
-          noiseAmount={0.1}
-          distortion={0.05}
-          className="rays"
-        />
+      <LightRays color="#fff" className="top-[-140vh]" opacity={0.25} blur={80} />
+
       </div>
 
       {/* Content Layer */}

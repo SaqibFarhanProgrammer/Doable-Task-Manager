@@ -1,24 +1,18 @@
-import { LuSearch } from "react-icons/lu";
 import { MdOutlineDashboardCustomize } from "react-icons/md";
 import { TfiLayoutGrid3Alt } from "react-icons/tfi";
 import { RiVideoLine } from "react-icons/ri";
 import { IoSettingsOutline } from "react-icons/io5";
 import { LiaCrownSolid } from "react-icons/lia";
-import { MdOutlineLibraryBooks } from "react-icons/md";
-import { LuUsers } from "react-icons/lu";
-import { GoDotFill } from "react-icons/go";
 
   
 function Sidebar() {
   return (
     <div className="w-[17vw] h-[98vh] p-2 bg-[#121212] rounded-2xl flex flex-col justify-between">
       {/* Top Section */}
+
+      
       <div className="top flex flex-col gap-4">
-        {/* Workspace Search */}
-        <div className="flex items-center bg-[#1F1F1F] rounded-lg p-2 gap-2 text-[#6D6D6D]">
-          <LuSearch className="text-xl" />
-          <span className="text-sm">Workspace</span>
-        </div>
+     
 
         {/* Main Menu */}
         <div className="flex flex-col gap-2 text-[#6D6D6D]">
@@ -50,35 +44,8 @@ function Sidebar() {
           </div>
         </div>
 
-        {/* Assets */}
-        <div className="flex flex-col gap-2 text-[#6D6D6D]">
-          <h3 className="text-xs font-semibold uppercase mb-1">Assets</h3>
-          <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#2D2D2D] transition-all duration-200 cursor-pointer">
-            <MdOutlineLibraryBooks className="text-xl" />
-            <span className="text-sm">Library</span>
-          </div>
-          <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#2D2D2D] transition-all duration-200 cursor-pointer">
-            <LuUsers className="text-xl" />
-            <span className="text-sm">Avatars</span>
-          </div>
-        </div>
-
-        {/* Teams */}
-        <div className="flex flex-col gap-2 text-[#6D6D6D]">
-          <h3 className="text-xs font-semibold uppercase mb-1">Teams</h3>
-          <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#2D2D2D] transition-all duration-200 cursor-pointer">
-            <GoDotFill className="text-base text-purple-500" />
-            <span className="text-sm">Marketing</span>
-          </div>
-          <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#2D2D2D] transition-all duration-200 cursor-pointer">
-            <GoDotFill className="text-base text-blue-500" />
-            <span className="text-sm">Development</span>
-          </div>
-          <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-[#2D2D2D] transition-all duration-200 cursor-pointer">
-            <GoDotFill className="text-base text-green-500" />
-            <span className="text-sm">Design</span>
-          </div>
-        </div>
+    
+       
       </div>
 
       {/* Bottom User Profile */}
