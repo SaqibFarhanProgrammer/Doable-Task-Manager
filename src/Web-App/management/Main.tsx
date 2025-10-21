@@ -10,6 +10,7 @@ function Main() {
       <Routes>
         <Route path="project" element={<Projects />} />
         <Route path="board" element={<Board />} />
+        
       </Routes>
     </div>
   )
