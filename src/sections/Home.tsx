@@ -1,19 +1,10 @@
 import MainButton from "@/components/MainButton";
 import Navbar from "@/components/Navbar";
-import LightRays from "../components/BgLight";
 import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="relative h-[80vh] w-full overflow-hidden text-white">
-      {/* Background Light Effect */}
-      <div className="absolute inset-0 z-0">
-        <LightRays
-          color="#fff"
-          className="top-[-140vh]"
-          opacity={0.25}
-          blur={80}
-        />
-      </div>
+     
 
       {/* Content Layer */}
       <div className="relative z-10 flex flex-col items-center">
