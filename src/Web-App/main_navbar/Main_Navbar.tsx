@@ -39,7 +39,7 @@ function Main_Navbar() {
         <div className="ml-2">
           <img
             className="h-10 w-10 rounded-full object-cover cursor-pointer"
-            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377dd9?q=80&w=2080&auto=format&fit=crop&ixlib-rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Re-using the same placeholder image
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZMfraI81_QCr29PrFj5TdPi50BBmJwB9dbg&s" // Re-using the same placeholder image
             alt="Profile"
           />
         </div>

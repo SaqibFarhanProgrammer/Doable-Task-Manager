@@ -7,11 +7,13 @@ function Main() {
   return (
     <div className="w-[83vw] h-[99vh] bg-[#0f0f0f] text-white overflow-y-auto">
       <Main_Navbar />
+      <div className="">
 
       <Routes>
         <Route path="project" element={<Projects />} />
         <Route path="board" element={<Board />} />\
       </Routes>
+      </div>
     </div>
   );
 }
