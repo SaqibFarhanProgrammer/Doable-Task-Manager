@@ -17,10 +17,9 @@ p {
 }
 
 .img {
-  background-image: linear-gradient( to top ,  black, #d7d7d7);
+  background-image: linear-gradient(to top, black, #d7d7d7);
   filter: drop-shadow(0 0 40px line);
   position: relative;
-  
 }
 
 .img::after {
@@ -33,6 +32,18 @@ p {
   z-index: -1;
 }
 
-
 .project_card {
+}
+
+.heading {
+  font-family: "a";
+  font-weight: 700;
+}
+.normal {
+  font-family: "a";
+  font-weight: 500;
+}
+.para {
+  font-family: "a";
+  font-weight: 400;
 }
