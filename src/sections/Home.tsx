@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="relative h-[80vh] w-full overflow-hidden text-white">
-     
-
       {/* Content Layer */}
       <div className="relative z-10 flex flex-col items-center">
         <Navbar />
@@ -24,12 +22,15 @@ export default function Home() {
           f
           <div className="mt-5 flex gap-4 justify-center items-center">
             <Link to="/login">
-              <MainButton text="Login" classname="bg-zinc-800 text-white" />
+              <MainButton
+                text="Login"
+                classname="bg-gradient-to-r from-gray-900 to-gray-700 text-white hover:from-gray-700 hover:to-gray-900 transition-all duration-300 shadow-md shadow-gray-800"
+              />
             </Link>
             <Link to="/work">
               <MainButton
-                classname="bg-white hover:bg-black hover:text-white text-black border border-[#6a6a6a]"
                 text="Manage Your Tasks"
+                classname="bg-white/90 text-black border border-gray-400 hover:bg-gray-100 hover:text-black hover:shadow-md hover:shadow-white/20 transition-all duration-300"
               />
             </Link>
           </div>
