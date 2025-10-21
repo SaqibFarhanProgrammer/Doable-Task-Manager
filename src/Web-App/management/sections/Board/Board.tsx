@@ -11,7 +11,7 @@ function Board() {
             <div className="flex justify-between items-start text-2xl">
  
           <h2 className="text-lg font-medium capitalize mb-2 px-1">Todo</h2>
-          <div className="h-7 w-7 bg-zinc-800 flex justify-center items-center rounded-full cursor-pointer hover:bg-zinc-600 transition-all duration-200">
+          <div className="h-7 w-7  flex justify-center items-center rounded-full cursor-pointer hover:bg-zinc-600 transition-all duration-200">
 
           <AiOutlinePlus className=" mx-auto" />
           </div>

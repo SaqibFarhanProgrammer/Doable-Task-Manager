@@ -15,7 +15,7 @@ function Main_Navbar() {
         <div className="flex items-center gap-3 bg-[#1F1F1F] py-2 px-3 rounded-lg cursor-pointer hover:bg-[#2D2D2D] transition-all duration-200">
           <LuSparkles className="text-white text-xl" />
           <div className="normal">
-            <p className="text-white text-sm ">Cr eate Project</p>
+            <p className="text-white text-sm ">Create Project</p>
             <p className="text-[#6D6D6D] normala'] text-xs">Auto film & clip faster</p>
           </div>
         </div>
