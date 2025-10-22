@@ -3,12 +3,15 @@ import { Button } from "./ui/button";
 
 type ButttonProps = {
   text: string;
-  classname : string
+  classname? : string
+  onClick? : () => void;
 };
 
-const MainButton : React.FC<ButttonProps> = ({ text ,classname }) => {
+const MainButton : React.FC<ButttonProps> = ({ text ,classname,onClick }) => {
   return (
-    <Button className={  ` ${classname} rounded-full px-8 py-5 text-sm font-medium  `}>
+    <Button 
+    onClick={onClick}
+    className={  ` ${classname} rounded-full px-8 py-5 text-sm font-medium  `}>
       {text}
     </Button>
   );

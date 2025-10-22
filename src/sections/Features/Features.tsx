@@ -1,12 +1,18 @@
 import FeatureCard from "./FeaturesCard"
 
+interface Feature {
+  title: string
+  desc: string
+  videoSrc: string
+}
+
 const Features = () => {
-  const featuresData = [
+  const featuresData: Feature[] = [
     {
       title: "Smart Task Management",
       desc: "Organize your workflow and boost productivity with an elegant and intuitive interface designed for efficiency.",
       videoSrc:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFXEygJRj6SYAiGKZLG2lese2EOV4ORqJWzhg_f2-ofsdBV_wqyfrgl8aL5x_K_WPi7oI&usqp=CAU",
+        "https://cdn.dribbble.com/userupload/4878533/file/original-2b5c4b5b9d8d76e1ad9ef09d3a1dbe4f.png?format=webp&resize=400x300&vertical=center",
     },
     {
       title: "Real-Time Collaboration",
@@ -32,7 +38,7 @@ const Features = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.1),transparent_70%)]" />
 
           <div className="flex flex-col lg:flex-row items-center gap-16 relative z-10">
-            {/* Card Section */}
+            {/* Video or visual section */}
             <div className="w-full lg:w-1/2">
               <FeatureCard
                 title={feature.title}
@@ -43,10 +49,10 @@ const Features = () => {
 
             {/* Text Section */}
             <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
-              <h1 className="text-5xl font-semibold text-white">
+              <h1 className="text-4xl md:text-5xl font-semibold text-white">
                 {feature.title}
               </h1>
-              <p className="text-gray-300 text-lg leading-relaxed max-w-lg">
+              <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-lg mx-auto lg:mx-0">
                 {feature.desc}
               </p>
             </div>

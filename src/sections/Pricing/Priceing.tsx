@@ -1,4 +1,19 @@
-const plans = [
+
+interface Feature {
+  text: string
+  active: boolean
+}
+
+interface Plan {
+  title: string
+  price: string
+  period?: string
+  desc: string
+  best?: boolean
+  features: Feature[]
+}
+
+const plans: Plan[] = [
   {
     title: "Free Plan",
     price: "$0",
@@ -53,32 +68,32 @@ const plans = [
 
 function Pricing() {
   return (
-    <section className="w-full font-['a'] py-20 bg-black text-white">
-      <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold mb-2">Build a website with AI</h1>
-        <p className="text-xl">Free for 7 days</p>
-        <p className="text-gray-300 mt-3">
+    <section className="w-full py-20 bg-black text-white font-['a']">
+      <div className="text-center mb-12 px-4">
+        <h1 className="text-3xl md:text-5xl font-bold mb-2">Build a website with AI</h1>
+        <p className="text-lg md:text-xl">Free for 7 days</p>
+        <p className="text-gray-300 mt-3 max-w-2xl mx-auto">
           Choose the best plan for your business. Change plans as you grow.
         </p>
       </div>
 
-      <div className="flex justify-center mb-10 gap-2">
-        <button className="px-4 py-2 border border-white rounded-full text-sm bg-black text-white hover:bg-white hover:text-black transition-all">
+      <div className="flex justify-center mb-10 gap-3 flex-wrap">
+        <button className="px-5 py-2 border border-white rounded-full text-sm bg-black text-white hover:bg-white hover:text-black transition-all">
           Monthly
         </button>
-        <button className="px-4 py-2 border border-white bg-white text-black rounded-full text-sm hover:bg-transparent hover:text-white transition-all">
+        <button className="px-5 py-2 border border-white bg-white text-black rounded-full text-sm hover:bg-transparent hover:text-white transition-all">
           Yearly (save 20%)
         </button>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-6 max-w-6xl mx-auto">
+      <div className="flex flex-wrap justify-center gap-6 max-w-7xl mx-auto px-4">
         {plans.map((plan, i) => (
           <div
             key={i}
-            className={`w-80 rounded-2xl p-[2px] ${
+            className={`w-full sm:w-[320px] md:w-[340px] rounded-2xl p-[2px] transition-all ${
               plan.best
-                ? "bg-gradient-to-r from-white to-gray-700"
-                : "bg-white/10"
+                ? "bg-gradient-to-r from-white to-gray-700 scale-[1.02]"
+                : "bg-white/10 hover:bg-white/20"
             }`}
           >
             <div className="bg-black rounded-2xl p-8 h-full flex flex-col justify-between">
@@ -89,9 +104,10 @@ function Pricing() {
                 <h2 className="text-2xl font-semibold mb-2">{plan.title}</h2>
                 <div className="flex items-end gap-1 mb-4">
                   <h3 className="text-4xl font-bold">{plan.price}</h3>
-                  <span className="text-sm text-gray-400">{plan.period}</span>
+                  {plan.period && <span className="text-sm text-gray-400">{plan.period}</span>}
                 </div>
                 <p className="text-gray-400 text-sm mb-6">{plan.desc}</p>
+
                 <ul className="space-y-2">
                   {plan.features.map((f, index) => (
                     <li
@@ -104,14 +120,15 @@ function Pricing() {
                         className={`w-2 h-2 rounded-full ${
                           f.active ? "bg-white" : "bg-gray-600"
                         }`}
-                      ></span>
+                      />
                       {f.text}
                     </li>
                   ))}
                 </ul>
               </div>
+
               <button
-                className={`mt-8 w-full py-3 rounded-full font-medium transition-all border ${
+                className={`mt-8 w-full py-3 rounded-full font-medium border transition-all ${
                   plan.best
                     ? "bg-white text-black border-white hover:bg-transparent hover:text-white"
                     : "bg-black text-white border-white hover:bg-white hover:text-black"

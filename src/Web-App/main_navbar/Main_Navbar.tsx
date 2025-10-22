@@ -1,42 +1,52 @@
 import { HiOutlinePlusCircle } from "react-icons/hi2"
 import { LuLayoutDashboard } from "react-icons/lu"
 import { MdOutlineAnalytics } from "react-icons/md"
+import { useNavigate } from "react-router-dom"
 
 function Main_Navbar() {
+  const Navigate = useNavigate()
+
   return (
-    <div className="w-full p-4 flex justify-between items-center">
+    <div className="w-full p-4 flex justify-between items-center flex-wrap">
       <div>
-        <h1 className="text-3xl font-medium text-white">Welcome, Michael</h1>
+        <h1 className="text-2xl sm:text-3xl font-medium text-white">Welcome, Michael</h1>
       </div>
 
-      <div className="flex items-center gap-3">
-        <div className="flex items-center gap-3 bg-[#1F1F1F] py-2 px-3 rounded-lg cursor-pointer hover:bg-[#2D2D2D] transition-all duration-200">
+      <div className="flex items-center gap-2 sm:gap-3 mt-3 sm:mt-0">
+        {/* Create Project */}
+        <div className="flex items-center gap-2 sm:gap-3 bg-[#1F1F1F] py-2 px-3 rounded-lg cursor-pointer hover:bg-[#2D2D2D] transition-all duration-200">
           <HiOutlinePlusCircle className="text-white text-xl" />
-          <div>
+          <div className="hidden sm:block">
             <p className="text-white text-sm font-medium">Create Project</p>
             <p className="text-[#6D6D6D] text-xs">Auto film & clip faster</p>
           </div>
         </div>
 
-        <div className="flex items-center gap-3 bg-[#1F1F1F] py-2 px-3 rounded-lg cursor-pointer hover:bg-[#2D2D2D] transition-all duration-200">
+        {/* Project Board */}
+        <div
+          className="flex items-center gap-2 sm:gap-3 bg-[#1F1F1F] py-2 px-3 rounded-lg cursor-pointer hover:bg-[#2D2D2D] transition-all duration-200"
+          onClick={() => Navigate('/work/board')}
+        >
           <LuLayoutDashboard className="text-white text-xl" />
-          <div>
+          <div className="hidden sm:block">
             <p className="text-white text-sm font-medium">Project Board</p>
             <p className="text-[#6D6D6D] text-xs">Import file from device</p>
           </div>
         </div>
 
-        <div className="flex items-center gap-3 bg-[#1F1F1F] py-2 px-3 rounded-lg cursor-pointer hover:bg-[#2D2D2D] transition-all duration-200">
+        {/* Dashboard */}
+        <div className="flex items-center gap-2 sm:gap-3 bg-[#1F1F1F] py-2 px-3 rounded-lg cursor-pointer hover:bg-[#2D2D2D] transition-all duration-200">
           <MdOutlineAnalytics className="text-white text-xl" />
-          <div>
+          <div className="hidden sm:block">
             <p className="text-white text-sm font-medium">Dashboard</p>
             <p className="text-[#6D6D6D] text-xs">Translate any video</p>
           </div>
         </div>
 
+        {/* Profile Image */}
         <div className="ml-2">
           <img
-            className="h-10 w-10 rounded-full object-cover cursor-pointer border border-zinc-700"
+            className="h-9 w-9 sm:h-10 sm:w-10 rounded-full object-cover cursor-pointer border border-zinc-700"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZMfraI81_QCr29PrFj5TdPi50BBmJwB9dbg&s"
             alt="Profile"
           />
