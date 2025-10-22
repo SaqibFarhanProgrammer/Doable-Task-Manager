@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom"
 import Main_Navbar from "../main_navbar/Main_Navbar"
 import Projects from "./sections/Projects/Projects"
 import Board from "./sections/Board/Board"
-import Dashboard from "./dashboard/Dashboard"
 
 function Main() {
   return (
@@ -12,7 +11,6 @@ function Main() {
         <Routes>
           <Route path="project" element={<Projects />} />
           <Route path="board" element={<Board />} />
-          <Route path="dashboad" element={<Dashboard />} />
         </Routes>
       </div>
     </div>
