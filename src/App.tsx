@@ -31,6 +31,7 @@ const App = () => {
         <Route path="/work/*" element={<Web_App />} />
         <Route path="*" element={<Not_Found />} />
       </Routes>
+      
     </div>
   );
 };
