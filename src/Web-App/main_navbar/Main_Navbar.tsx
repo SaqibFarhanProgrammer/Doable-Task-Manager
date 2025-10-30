@@ -9,7 +9,7 @@ function Main_Navbar() {
   return (
     <div className="w-full p-4 flex justify-between items-center flex-wrap">
       <div>
-        <h1 className="text-2xl sm:text-3xl font-medium text-white">Welcome, Saqib Farhan</h1>
+        <h1 className="text-2xl sm:text-3xl font-medium text-white">Welcome, Saqib ,  Farhan</h1>
       </div>
 
       <div className="flex items-center gap-2 sm:gap-3 mt-3 sm:mt-0">
